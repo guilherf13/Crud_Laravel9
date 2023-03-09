@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('phone', 11);
             $table->string('cpf', 11);
             $table->string('endereco');
-            $table->string('email', 70);
+            $table->string('email', 70); //Pode ser Hotmail ou Qualquer outro email
             $table->timestamps();
         });
     }
