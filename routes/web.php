@@ -5,6 +5,7 @@ use App\Http\Controllers\PrincimpalController;
 use App\Http\Controllers\SobreNosController;
 use App\Http\Controllers\ContatosController;
 use App\Http\Controllers\TesteController;
+use App\Http\Controllers\FornecedoresController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,11 +30,11 @@ Route::get('/loguin', function ()
 Route::prefix('/app')->group(function ()
 {
     Route::get('/clientes', [ClientesController::class, 'clientes']);
-    Route::get('/fornecedores', [FornecedoresController::class, 'fornecedores']);
+    Route::get('/fornecedores', [FornecedoresController::class, 'index']);
     Route::get('/produtos', [ProdutosController::class, 'produtos']);    
 });
 
-Route::get('/teste/{var1}/{var2}', [TesteController::class, 'testes']);
+Route::get('/teste/{valor1}/{valor2}', [TesteController::class, 'testes']);
 Route::fallback(function ()
 {
     echo 'Pagina Não encontrada. <a href="'.route('site.princimpal').'">Clique aqui</a> para voltar a pagina inicial';
