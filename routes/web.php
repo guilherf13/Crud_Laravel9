@@ -17,9 +17,9 @@ use App\Http\Controllers\FornecedoresController;
 |
 */
 //Rotas de navegação basica.
-Route::get('/', [PrincimpalController::class, 'princimpal'])->name('site.princimpal');
-Route::get('/sobre-sos', [SobreNosController::class, 'sobreNos'])->name('site.sobreNos');
-Route::get('/contatos', [ContatosController::class, 'contatos'])->name('site.contatos');
+Route::get('/', [PrincimpalController::class, 'index'])->name('site.index');
+Route::get('/sobre-nos', [SobreNosController::class, 'sobreNos'])->name('site.sobrenos');
+Route::get('/contato', [ContatosController::class, 'contatos'])->name('site.contato');
 //Rota de loguin
 Route::get('/loguin', function ()
 {
