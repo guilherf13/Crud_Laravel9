@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class PrincimpalController extends Controller
 {
-    public function princimpal ()
+    public function index ()
     {
-        return view('site.princimpal');
+        return view('site.principal');
     }
 }
