@@ -1,4 +1,7 @@
+<!--Aqui é feita a extensão do html basico. A partir daqui ele puxa o aquivo basico.blade.php e vira arquivo so-->
 @extends('site.layouts.basico')
+<!--Aqui é defenido usando a section 'conteudo' e onde estiver um yield no basico.blade sera substitudido por esse bloco conteudo-->
+@section('title', 'Contatos')
 
 @section('conteudo')
    <div class="topo">
