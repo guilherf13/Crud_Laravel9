@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::table('product_details', function (Blueprint $table) {
             $table->unsignedBigInteger('product_id');
-            
+
             //constrant
             $table->foreign('product_id')->references('id')->on('products');
+            $table->unique('product_id');
         });
     }
 
@@ -28,6 +29,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_details');
+        Schema::table('product_details', function (Blueprint $table) {
+            $table->dropForeign('product_details_product_id_foreign');
+            $table->dropColumn('product_id');
+        });
     }
 };
